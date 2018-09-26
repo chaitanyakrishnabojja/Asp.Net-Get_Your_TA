@@ -1,0 +1,21 @@
+﻿@import url('master.css');
+header{
+    background-color: dimgrey;
+}
+footer {
+    background-color: dimgray;
+}
+
+#getyourta{
+    color: white;
+}
+
+#footer{
+    color:white;
+}
+#navbar{
+    background-color: lightblue;
+}
+#user{
+    color:white;
+}

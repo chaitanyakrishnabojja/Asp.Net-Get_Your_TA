@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DashBoard.master.cs" Inherits="Get_Your_TA.DashBoard"   %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Get Your TA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+  
+    <link href="Content/master.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.2.4.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="form-group">
+                <header class="col-sm-12">
+                    <h1 id="getyourta"class="col-sm-offset-1 col-sm-8">Get Your TA</h1>
+                    <h2 id="user" class="col-sm-3">
+                        <asp:Label ID="lblUserName" CssClass="col-sm-8" runat="server" Text="Label"></asp:Label> 
+                        <asp:Button ID="btnLogOut" runat="server" CssClass="col-sm-4 btn-sm" Text="Logout" OnClick="btnLogOut_Click" />
+                    </h2>
+                    
+                        
+                    
+                </header>
+            </div>
+            
+
+            <main>
+                <div class="form-group">
+                    <div id="navbar" class="col-sm-2">
+                        <asp:TreeView ID="TreeView1" runat="server">
+                            <Nodes>
+                                <asp:TreeNode NavigateUrl="~/Home.aspx" Text="Home" Value="Home"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Insert.aspx" Text="Insert" Value="Insert"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Edit.aspx" Text="Edit/Delete" Value="Edit/Delete"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/ChangeDetails.aspx" Text="Change Details" Value="Change Details"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Help.aspx" Text="Help" Value="Help"></asp:TreeNode>
+                            </Nodes>
+                        </asp:TreeView>
+                    </div>
+                    
+                    <div class="col-sm-10">
+                        <asp:ContentPlaceHolder ID="mainPlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    
+
+                </div>
+
+                
+            </main>
+            <footer class="footer col-sm-12">`
+                <h5 id="footer">&copy;Copyright Get Your TA 
+                        <asp:HyperLink ID="hlinkEmail" runat="server" NavigateUrl="mailto:getyourta@gmail.com">getyourta@gmail.com</asp:HyperLink>
+                </h5>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
